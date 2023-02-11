@@ -26,7 +26,7 @@ class SearchNeighboursService:
         for book in books:
             dist = cls.calculate_distance_between_books(target_book, book)
             distances.append([dist, book])
-            distances.sort(key=operator.itemgetter(0))
+            distances.sort(key=lambda x : x[0])
             if len(distances) > neighbors_count:
                 distances.pop(-1)
         results = [[i[0], i[1].title, i[1].authors[0].name, i[1].id] for i in distances]
