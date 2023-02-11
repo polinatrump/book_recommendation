@@ -1,0 +1,5 @@
+from .author_repository import AuthorRepository
+from .book_repository import BookRepository
+from .user_repository import UserRepository
+from .genre_repository import GenreRepository
+from .recommendation_repository import RecommendationRepository
