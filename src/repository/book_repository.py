@@ -25,43 +25,9 @@ class BookRepository(SqlAlchemyRepository):
             return self.parse(model)
         return model
 
-    # def parse(self, model: BookDatabaseModel) -> BaseModel:
-    #     # model_as_dict = model.__dict__
-    #     model.genres_bin = model.genres_bin.split(',')
-    #     model.authors_bin =  model.authors_bin.split(',')
-    #     return self._parse(model.__dict__)
-    # #
-    # def _parse(self, model: dict) -> BaseModel:
-    #     for key, value in model.items():
-    #         if key not in ['genres_bin', 'authors_bin']:
-    #             if isinstance(value, list):
-    #                 model[key] = [i.__dict__ for i in value if isinstance(i, BaseDatabaseModel)]
-    #     return self.model.domain_model.parse_obj(model)
-
-
-    # def _create(self, **kwargs) -> Type[Base]:
-    #     """
-    #     Create row in database by kwargs
-    #     :param kwargs: model fields
-    #     :return: SQLAlchemy model
-    #     """
-    #     model = self.model()
-    #     print(kwargs.items())
-    #     for key, value in kwargs.items():
-    #         if hasattr(model, key):
-    #             setattr(model, key, value)
-    #     self.session.add(model)
-    #     self.session.commit()
-    #     self.session.refresh(model)
-    #     self.session.close()
-    #     return model
-
 
 if __name__ == '__main__':
     session = get_session()
     BookRepository(session).create(
        **{"id": 4, "title": "1234"}
     )
-    # print(BookRepository(session).get_book_by_title(
-    #    title="Test"
-    # ))

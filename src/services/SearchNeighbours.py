@@ -16,7 +16,7 @@ class SearchNeighboursService:
             books: List[Book],
     ):
         """
-        Method ...
+        Method to find K neighbours books
         :param target_book: 
         :param neighbors_count:
         :param books:
@@ -39,7 +39,7 @@ class SearchNeighboursService:
             book2: Book
     ) -> float:
         """
-        Method ...
+        Method for calculating distances between books
         :param book1: 
         :param book2: 
         :return: 

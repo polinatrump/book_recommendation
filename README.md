@@ -36,23 +36,28 @@ Then based on Event Storming I made DDD:<br />
 
 4. **Metrics at least two. Sonarcube would be great. Other non-trivial metrics are also fine.**<br />
  I downloaded and installed Sonarcube and used it for my project.<br />
-* Here you can see results:  <br />
-добавить картинку с сонаркьюба
-Вывод продублировать
+* Here you can see Sonarcube results:  <br />
+[Sonarcube screenshot](https://github.com/polinatrump/book_recommendation/blob/master/Sonarcube.jpg)<br />
 
-5. **Clean Code Development: at least 5 points you can show me + >>10 points on your personal cheat sheet**
+* Bugs: 0
+* Vulnerabilities: 0
+* Security Hotspot: 1 <br /> I checked by myself this moment and it is okay
+* Code Smells: 16
+There are issues like [that](https://github.com/polinatrump/book_recommendation/blob/master/Sonarcube_Code_smell.jpg), so after manual check I think it's okay to leave it like this<br />
+* Coverage: I used [coverage report](https://github.com/polinatrump/book_recommendation/blob/master/Coverage.jpg)<br />
 
-My personal cheet sheet :
+5. **Clean Code Development: at least 5 points you can show me + >>10 points on your personal cheat sheet**<br />
 
-* Use descriptive intention revealing names - it's important to write code easy and readable. So here I used simple for cycle and you as a \
-person who sees this project for the first time it is easy to understand code
-* Don't repeat one code twice - Code should have a single, unambiguous, authoritative representation within a system. 
-I wrote a function здесь that split values in column. I have to different columns (genres and authors) that I \
-have to split and i don't write code twice for each column but use just one function for this task
-* You Aren't Gonna Need It - In my code I don't have variables and functions that I don't use in my code
-* Create the names of variables, functions and classes that way, that you can understand what they are for easily in the future
+My personal cheet sheet :<br />
+
+* Use descriptive intention revealing names - it's important to write code easy and readable. So [here](https://github.com/polinatrump/book_recommendation/blob/master/dataset_preprocessing.py#L85-L86) I used simple for cycle and you as a person who sees this project for the first time it is easy to understand code
+* Don't repeat one code twice - Code should have a single, unambiguous, authoritative representation within a system. <br />
+I wrote a function [here](https://github.com/polinatrump/book_recommendation/blob/master/dataset_preprocessing.py#L56-L58) that split values in column. I have two different columns (genres and authors) that I \
+have to split and I didn't write code twice for each column but use just one function for this task
+* You Aren't Gonna Need It - In my code I don't have variables and functions that I don't use - checked with Sonarcube
+* Create the names of variables, functions and classes that way, that you can understand what they are for easily in the future - [example](https://github.com/polinatrump/book_recommendation/blob/master/src/models/BookModel.py#L22)
 * The code should be easily testable
-* Tests should be easy to understand and easy to change
+* Tests should be easy to understand and easy to change - see my tests [here](https://github.com/polinatrump/book_recommendation/blob/master/tests/unit/services/test_services.py#L6-L151)
 * Use docstring to ealsily understand what each method or class does, its role and responsibility 
 * Write Exceptions for some cases to easily understand if one certain error occurs 
 * Avoid using ambiguous shorthand. A variable should have a long descriptive name than a short confusing name.
@@ -74,6 +79,7 @@ I developed my project in PyCharm IDE. The Key-Shortcuts that I actually used ar
 * Double Shift --> Search everywhere any file, class, variable, symbol in project and current Git repository
 * Shift + F10 --> Run the script
 * Shift + F9 --> I use Debug for study errors in code
+* Alt + Enter --> to import library or class in python file
 * Developers can create database in PyCharm and easily see tables and write queries. For this press 'Database'. Ctrl+Shift+Q to get to Query Console, Ctrl+F5 to refresh Database
 
 10. **DSL Create a small DSL Demo example snippet in your code even if it does not contribute to your project (hence it can also be in another language).**
