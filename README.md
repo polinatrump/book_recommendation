@@ -87,7 +87,7 @@ I developed my project in PyCharm IDE. The Key-Shortcuts that I actually used ar
 * Developers can create database in PyCharm and easily see tables and write queries. For this press 'Database'. Ctrl+Shift+Q to get to Query Console, Ctrl+F5 to refresh Database
 
 10. **DSL Create a small DSL Demo example snippet in your code even if it does not contribute to your project (hence it can also be in another language).**<br />
-Using the click library, a DSL interface was created to run the program ([file here](https://github.com/polinatrump/book_recommendation/blob/master/src/entrypoints/DSLUserInterface.py)). This mode involves passing input parameters through flags. Command here: python run_dsl.py --first_name=1 --last_name=2 --book_title='The Hunger Games' --recommend_count=2
+Using the click library, a DSL interface was created to run the program ([file here](https://github.com/polinatrump/book_recommendation/blob/master/src/entrypoints/DSLUserInterface.py)). This mode involves transfer input parameters through flags. Command here: python run_dsl.py --first_name=1 --last_name=2 --book_title='The Hunger Games' --recommend_count=2
 
 11. **Functional Programming: prove that you have covered all functional aspects in your code as:
 only final data structures
