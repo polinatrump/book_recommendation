@@ -29,7 +29,7 @@ class SearchNeighboursService:
             distances.sort(key=operator.itemgetter(0))
             if len(distances) > neighbors_count:
                 distances.pop(-1)
-        results = [[i[0], i[1].title, i[1].id] for i in distances]
+        results = [[i[0], i[1].title, i[1].authors[0].name, i[1].id] for i in distances]
         return results
 
     @classmethod
@@ -89,3 +89,32 @@ class SearchNeighboursService:
             books = book_list_usecase(limit=batch_size, offset=i)
             args.append((book, count_of_recomendations, books))
         return args
+
+    @classmethod
+    def delete_dublicates_in_results(
+            cls,
+            results
+    ):
+        results_book_dublicate_delete = []
+        unique_book_names = []
+        for item in results[1:]:
+            if item[1] not in unique_book_names:
+                unique_book_names.append(item[1])
+                results_book_dublicate_delete.append(item)
+        return results_book_dublicate_delete
+
+    @classmethod
+    def limit_same_authors_in_results(
+            cls,
+            results
+    ):
+        same_author_offset = 3
+        dict_author_times_in_results = {}
+        processed_results = []
+        for item in results:
+            if item[2] not in dict_author_times_in_results.keys():
+                dict_author_times_in_results[item[2]] = 0
+            if dict_author_times_in_results[item[2]] < same_author_offset:
+                dict_author_times_in_results[item[2]] += 1
+                processed_results.append(item)
+        return processed_results

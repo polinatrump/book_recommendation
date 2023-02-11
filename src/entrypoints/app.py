@@ -38,7 +38,7 @@ class ApplicationEntryPoint:
                 book = book_by_title_use_case(book_title)
             except BookTitleNotFoundException:
                 user_interface.alert_book_not_found(book_title)
-        processes = []
+
         count_of_recommendations = user_interface.get_count_recommendations()
         batches = SearchNeighboursService.create_batches_as_input_arguments(
             count_of_recomendations=count_of_recommendations,
@@ -46,7 +46,11 @@ class ApplicationEntryPoint:
             book_list_usecase=book_list_usecase
         )
         results = SearchNeighboursService.process_batches_in_separate_processes(batches)
+        results = SearchNeighboursService.delete_dublicates_in_results(results)
+        results = SearchNeighboursService.limit_same_authors_in_results(results)
         user_interface.alert_recommendations_before_result()
+
         for i in results[0:count_of_recommendations]:
-            print(*i)
-            recommendations_create_usecase(book_id=int(i[2]), user_id=user.id)
+            print('Book name: ', i[1])
+            print('Author: ', i[2], '\n')
+            recommendations_create_usecase(book_id=int(i[3]), user_id=user.id)

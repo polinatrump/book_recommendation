@@ -148,6 +148,6 @@ class TestSimilarity:
 
     def test_process_batches_returns_empty_for_empty_list(self):
         result = SearchNeighboursService.process_batches_in_separate_processes([])
-        assert result == result
+        assert [] == result
 
 

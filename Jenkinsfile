@@ -13,7 +13,6 @@ pipeline {
                 echo 'Building..'
                 sh '''
                 pip install -r requirements.txt
-                python3 dataset_preprocessing.py
                 '''
             }
         }
