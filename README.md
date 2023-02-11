@@ -96,3 +96,5 @@ the use of higher-order functions
 functions as parameters and return values
 use closures / anonymous functions
 You can also do it outside of your project. Even in another language as F#, Clojure, Julia, etc.**<br />
+
+In file [FP.py](https://github.com/polinatrump/book_recommendation/blob/master/FP.py) you can see simple example of user interface functions, where I used higher-order functions and functions as parameters and return values. They are all final data structures. There is almost no side effect except ***recom_num*** variable. The example of anonymous function you can find [here](https://github.com/polinatrump/book_recommendation/blob/master/src/services/SearchNeighbours.py#L29)
