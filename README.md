@@ -66,14 +66,16 @@ have to split and I didn't write code twice for each column but use just one fun
 * Single responsibility principle. Classes and functions should do one thing and do it well. It's good to write short and simple functions that perform a single task. My examples [here](https://github.com/polinatrump/book_recommendation/blob/master/dataset_preprocessing.py#L48-L81)
 
 
-6. **Build Management with any Build System as Ant, Maven, Gradle, etc. (only Travis is perhaps not enough) Do e.g. generate Docs, call tests, etc. (it could be also disconnected from the project just to learn a build tool!)**
-The pyinstaller library was used as build management, which allows you to build python code into executable files ([link](https://github.com/polinatrump/book_recommendation/blob/master/run.exe). For this, the pyinstaller --onefile run.py command was used. You can see output for this command [here](https://github.com/polinatrump/book_recommendation/blob/master/pyinstaller_launch.txt). This command collects the source files that are required to run run.py into a single executable file. This command creates the dist and build directories. The dist folder contains various files that the builder creates as it builds. In the dist folder, respectively, is the executable file itself. It is important that the executable must be rebuilt every time if the program is to be run on a different CPU architecture.
+6. **Build Management with any Build System as Ant, Maven, Gradle, etc. (only Travis is perhaps not enough) Do e.g. generate Docs, call tests, etc. (it could be also disconnected from the project just to learn a build tool!)**<br />
+The pyinstaller library was used as build management, which allows you to build python code into executable files ([link](https://github.com/polinatrump/book_recommendation/blob/master/run.exe)). For this, the pyinstaller --onefile run.py command was used. You can see output for this command [here](https://github.com/polinatrump/book_recommendation/blob/master/pyinstaller_launch.txt). This command collects the source files that are required to run run.py into a single executable file. This command creates the dist and build directories. The dist folder contains various files that the builder creates as it builds. In the dist folder, respectively, is the executable file itself. It is important that the executable must be rebuilt every time if the program is to be run on a different CPU architecture.
 
-7. **Integrate some nice Unit-Tests in your Code to be integrated into the Build**
+7. **Integrate some nice Unit-Tests in your Code to be integrated into the Build**<br />
+[Unit tests](https://github.com/polinatrump/book_recommendation/blob/master/tests/unit/services/test_services.py) were written that cover the basic business logic of finding the distance between books and issuing results. The pytest library was used to create. Also, in order for the tests to always use the same source data, fixtures for domain models were written. These fixtures are located in the [tests/fixtures folder](https://github.com/polinatrump/book_recommendation/tree/master/tests/fixtures/domain). These tests are located [here](https://github.com/polinatrump/book_recommendation/blob/master/tests/unit/services/test_services.py). To assess the coverage of the source code by tests, an additional coverage library was used. Test coverage was 66%.
 
-8. **Continuous Delivery: show me your pipeline using e.g. Jenkins, Travis-CI, Circle-CI, GitHub Action, GitLab CI, etc. E.g. you can also use Jenkins Pipelining or BlueOcean, etc. But at least insert more than 2 script calls as done in the lecture! (e.g. also call Ant or Gradle or something else).**
+8. **Continuous Delivery: show me your pipeline using e.g. Jenkins, Travis-CI, Circle-CI, GitHub Action, GitLab CI, etc. E.g. you can also use Jenkins Pipelining or BlueOcean, etc. But at least insert more than 2 script calls as done in the lecture! (e.g. also call Ant or Gradle or something else).**<br />
+Jenkins [file here](https://github.com/polinatrump/book_recommendation/blob/master/Jenkinsfile) is used for automated testing and deployment builds. For this, a pipeline is used, which describes the different stages of this entire process. We first specify the name of the agent. The agent is a separate process in which all this is performed. In our case, the agent in the docker is used, i.e. when this theme is launched, a separate container is created in which subsequent commands are executed. pollSCM is a parameter that says that every 5 minutes it monitors changes in the GitHub and if there is a new commit there, it starts the whole process. Next come the stages. The first build we install dependencies and libraries in it. Then the testing stage, we run the tests, just so that they all pass successfully. And the last thing we collect is just an executable file if everything is ok at the previous stages. If one of the stages fails, the subsequent ones will not be executed.
 
-9. **Use a good IDE and get fluent with it: e.g. IntelliJ. What are your favorite Key-Shortcuts?!**
+9. **Use a good IDE and get fluent with it: e.g. IntelliJ. What are your favorite Key-Shortcuts?!**<br />
 
 I developed my project in PyCharm IDE. The Key-Shortcuts that I actually used are:
 * ctrl+/ --> Comment/uncomment current line or selected block with line comments
@@ -84,7 +86,8 @@ I developed my project in PyCharm IDE. The Key-Shortcuts that I actually used ar
 * Alt + Enter --> to import library or class in python file
 * Developers can create database in PyCharm and easily see tables and write queries. For this press 'Database'. Ctrl+Shift+Q to get to Query Console, Ctrl+F5 to refresh Database
 
-10. **DSL Create a small DSL Demo example snippet in your code even if it does not contribute to your project (hence it can also be in another language).**
+10. **DSL Create a small DSL Demo example snippet in your code even if it does not contribute to your project (hence it can also be in another language).**<br />
+Using the click library, a DSL interface was created to run the program ([file here](https://github.com/polinatrump/book_recommendation/blob/master/src/entrypoints/DSLUserInterface.py)). This mode involves passing input parameters through flags. Command here: python run_dsl.py --first_name=1 --last_name=2 --book_title='The Hunger Games' --recommend_count=2
 
 11. **Functional Programming: prove that you have covered all functional aspects in your code as:
 only final data structures
@@ -92,4 +95,4 @@ only final data structures
 the use of higher-order functions
 functions as parameters and return values
 use closures / anonymous functions
-You can also do it outside of your project. Even in another language as F#, Clojure, Julia, etc.**
+You can also do it outside of your project. Even in another language as F#, Clojure, Julia, etc.**<br />
