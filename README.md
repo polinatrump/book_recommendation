@@ -12,32 +12,31 @@ Metadata can be found here:
 https://www.kaggle.com/datasets/meetnaren/goodreads-best-books?select=book_data.csv
 The dataset was taken from Kaggle and contained book titles, authors, genres, descriptions, and ratings. The data from the csv file has been put into the database.
 
-1. **Use and understand Git!**
+1. **Use and understand Git!**<br />
 You can see that the project is on Git-hub and check version control.
 
 2. **UML at least 3 good different diagrams. "good" means you can pump it up artificially as written in DDD. \
-You have 10 million $ from me! Please export the pics. I can not install all tools to view them!**
+You have 10 million $ from me! Please export the pics. I can not install all tools to view them!**<br />
 
-[Use case diagram](https://github.com/polinatrump/book_recommendation/blob/master/Use_case_diagram.svg)
-[Activity diagram](https://github.com/polinatrump/book_recommendation/blob/master/Activity_diagram.svg)
-[Entity Relationship Diagram](https://github.com/polinatrump/book_recommendation/blob/master/Entity%20Relationship%20Diagram.jpg)
+[Use case diagram](https://github.com/polinatrump/book_recommendation/blob/master/Use_case_diagram.svg)<br />
+[Activity diagram](https://github.com/polinatrump/book_recommendation/blob/master/Activity_diagram.svg)<br />
+[Entity Relationship Diagram](https://github.com/polinatrump/book_recommendation/blob/master/Entity%20Relationship%20Diagram.jpg)<br />
 [Object diagram](https://github.com/polinatrump/book_recommendation/blob/master/Object%20Diagram.jpg)
 
-3. **DDD If your domain is too small, invent other domains around and document these domains (as if you have 100 Mio € from Edlich-Investment!) Develop a clear strategic design with mappings/relationships with >4 Domains coming from an Event Storming. Drop your Domains into a Core Domain Chart and indicate the Relations between the Domains!**
+3. **DDD If your domain is too small, invent other domains around and document these domains (as if you have 100 Mio € from Edlich-Investment!) Develop a clear strategic design with mappings/relationships with >4 Domains coming from an Event Storming. Drop your Domains into a Core Domain Chart and indicate the Relations between the Domains!**<br />
 
 Firstly I made Event Storming diagram, defined domain events and commands and reactions for them.
 
 Please, after you go to the link click on Download - picture will not be downloaded on your computer but these way \ 
-you can see full picture
-Event Storming: https://github.com/polinatrump/Book_recommendation_system/blob/main/EventStorming.jpg
+you can see full picture <br />
+[Event Storming](https://github.com/polinatrump/book_recommendation/blob/master/EventStorming.jpg)<br />
 
-Then based on Event Storming I made DDD:
+Then based on Event Storming I made DDD:<br />
+[Domain and Subdomain Relationships](https://github.com/polinatrump/book_recommendation/blob/master/DDD.jpg)<br />
 
-Domain and Subdomain Relationships: https://github.com/polinatrump/Book_recommendation_system/blob/main/DDD.jpg
-
-4. **Metrics at least two. Sonarcube would be great. Other non-trivial metrics are also fine.**
- I downloaded and installed Sonarcube and used it for my project.
-* Here you can see results:  
+4. **Metrics at least two. Sonarcube would be great. Other non-trivial metrics are also fine.**<br />
+ I downloaded and installed Sonarcube and used it for my project.<br />
+* Here you can see results:  <br />
 добавить картинку с сонаркьюба
 Вывод продублировать
 
