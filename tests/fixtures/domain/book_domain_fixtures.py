@@ -25,7 +25,7 @@ def create_book_domain_model(
 @pytest.fixture
 def create_book_domain_model_with_params(
         id=1,
-        authors=[Author(id=1, name = "Suzanne Collins")],
+        authors=[Author(id=1, name="Suzanne Collins")],
         rating=1.0,
         rating_count=1,
         review_count=1,
