@@ -45,6 +45,7 @@ Then based on Event Storming I made DDD:<br />
 * Code Smells: 16
 There are issues like [that](https://github.com/polinatrump/book_recommendation/blob/master/Sonarcube_Code_smell.jpg), so after manual check I think it's okay to leave it like this<br />
 * Coverage: I used [coverage report](https://github.com/polinatrump/book_recommendation/blob/master/Coverage.jpg)<br />
+Coverage is 66 % for my project.
 
 5. **Clean Code Development: at least 5 points you can show me + >>10 points on your personal cheat sheet**<br />
 
@@ -66,6 +67,7 @@ have to split and I didn't write code twice for each column but use just one fun
 
 
 6. **Build Management with any Build System as Ant, Maven, Gradle, etc. (only Travis is perhaps not enough) Do e.g. generate Docs, call tests, etc. (it could be also disconnected from the project just to learn a build tool!)**
+The pyinstaller library was used as build management, which allows you to build python code into executable files ([link](https://github.com/polinatrump/book_recommendation/blob/master/run.exe). For this, the pyinstaller --onefile run.py command was used. You can see output for this command [here](https://github.com/polinatrump/book_recommendation/blob/master/pyinstaller_launch.txt). This command collects the source files that are required to run run.py into a single executable file. This command creates the dist and build directories. The dist folder contains various files that the builder creates as it builds. In the dist folder, respectively, is the executable file itself. It is important that the executable must be rebuilt every time if the program is to be run on a different CPU architecture.
 
 7. **Integrate some nice Unit-Tests in your Code to be integrated into the Build**
 
