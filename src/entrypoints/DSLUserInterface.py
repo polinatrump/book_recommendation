@@ -34,4 +34,4 @@ def start(
     user_interface.alert_recommendations_before_result()
     for i in results[0:int(recommend_count)]:
         print(*i)
-        recommendations_create_usecase(book_id=int(i[2]), user_id=user.id)
+        recommendations_create_usecase(book_id=int(i[3]), user_id=user.id)
