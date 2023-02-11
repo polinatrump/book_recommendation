@@ -5,21 +5,12 @@ Project author: Polina Kozyr
 
 
 PROJECT DESCRIPTION
-The goal of the project is to create a simple book recommendation system based on the genre and author analysis. \
-The user enters his name and surname and a book that he has already read and liked. Based on data of this book \
-other books recommendations are calculated. Project is a pet one and may be concerned as a small service \
-of some big recommendation system. For now recommendations are evaluated only by one book that user entered. Maybe in \
-the future this system could be expanded and possibility of taking into account several books for recommendation \
-will be implemented. 
-
-Как описать что мы создали бд и что в каждом файле \
-- надо ли это вообще
-
-Как утановить и запустить проект
+The goal of the project is to create a simple book recommendation system based on the genre and author analysis. The user enters his name and surname and a book that he has already read and liked. Based on data of this book other books recommendations are calculated. Project is a pet one and may be concerned as a small service of some big recommendation system. For now recommendations are evaluated only by one book that user entered. Maybe in the future this system could be expanded and possibility of taking into account several books for recommendation will be implemented. 
 
 * Dataset with 54000 plus books was used.
 Metadata can be found here:
 https://www.kaggle.com/datasets/meetnaren/goodreads-best-books?select=book_data.csv
+The dataset was taken from Kaggle and contained book titles, authors, genres, descriptions, and ratings. The data from the csv file has been put into the database.
 
 1. **Use and understand Git!**
 You can see that the project is on Git-hub and check version control.
@@ -27,10 +18,10 @@ You can see that the project is on Git-hub and check version control.
 2. **UML at least 3 good different diagrams. "good" means you can pump it up artificially as written in DDD. \
 You have 10 million $ from me! Please export the pics. I can not install all tools to view them!**
 
-Use_case_diagram: https://github.com/polinatrump/Book_recommendation_system/blob/main/Use_case_diagram.svg
-Activity_diagram: https://github.com/polinatrump/Book_recommendation_system/blob/main/Activity_diagram.svg
-Entity Relationship Diagram: https://github.com/polinatrump/Book_recommendation_system/blob/main/Entity%20Relationship%20Diagram.jpg
-Object_diagram: https://github.com/polinatrump/Book_recommendation_system/blob/main/Object%20Diagram.jpg
+[Use case diagram](https://github.com/polinatrump/book_recommendation/blob/master/Use_case_diagram.svg)
+[Activity diagram](https://github.com/polinatrump/book_recommendation/blob/master/Activity_diagram.svg)
+[Entity Relationship Diagram](https://github.com/polinatrump/book_recommendation/blob/master/Entity%20Relationship%20Diagram.jpg)
+[Object diagram](https://github.com/polinatrump/book_recommendation/blob/master/Object%20Diagram.jpg)
 
 3. **DDD If your domain is too small, invent other domains around and document these domains (as if you have 100 Mio € from Edlich-Investment!) Develop a clear strategic design with mappings/relationships with >4 Domains coming from an Event Storming. Drop your Domains into a Core Domain Chart and indicate the Relations between the Domains!**
 
