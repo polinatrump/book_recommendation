@@ -25,7 +25,6 @@ class BookRepository(SqlAlchemyRepository):
             return self.parse(model)
         return model
 
-
 if __name__ == '__main__':
     session = get_session()
     BookRepository(session).create(
