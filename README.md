@@ -58,12 +58,12 @@ have to split and I didn't write code twice for each column but use just one fun
 * Create the names of variables, functions and classes that way, that you can understand what they are for easily in the future - [example](https://github.com/polinatrump/book_recommendation/blob/master/src/models/BookModel.py#L22)
 * The code should be easily testable
 * Tests should be easy to understand and easy to change - see my tests [here](https://github.com/polinatrump/book_recommendation/blob/master/tests/unit/services/test_services.py#L6-L151)
-* Use docstring to ealsily understand what each method or class does, its role and responsibility 
-* Write Exceptions for some cases to easily understand if one certain error occurs 
+* Use docstring (example [here](https://github.com/polinatrump/book_recommendation/blob/master/src/repository/author_repository.py#L13-L17) to ealsily understand what each method or class does, its role and responsibility 
+* Write Exceptions for some cases to easily understand if one certain error occurs - example [here](https://github.com/polinatrump/book_recommendation/blob/master/src/exceptions/author_exceptions.py#L3-L14) 
 * Avoid using ambiguous shorthand. A variable should have a long descriptive name than a short confusing name.
-* Don’t use magic numbers. Magic numbers are numbers with special, hardcoded semantics that appear in code but do not have any meaning or explanation. Usually, these numbers appear as literals in more than one location in our code. An example in my code here
-* Classes and functions should do one thing and do it well. It's good to write short and simple functions that perform a single task. My example here
-* Single responsibility principle 
+* Don’t use magic numbers. Magic numbers are numbers with special, hardcoded semantics that appear in code but do not have any meaning or explanation. Usually, these numbers appear as literals in more than one location in our code. An example in my code [here](https://github.com/polinatrump/book_recommendation/blob/master/src/services/SearchNeighbours.py#L111)
+* Single responsibility principle. Classes and functions should do one thing and do it well. It's good to write short and simple functions that perform a single task. My examples [here](https://github.com/polinatrump/book_recommendation/blob/master/dataset_preprocessing.py#L48-L81)
+
 
 6. **Build Management with any Build System as Ant, Maven, Gradle, etc. (only Travis is perhaps not enough) Do e.g. generate Docs, call tests, etc. (it could be also disconnected from the project just to learn a build tool!)**
 
