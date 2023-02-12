@@ -1,15 +1,15 @@
-Data Science Master class: Advanced software engineering
-University: Berliner Hochschule für Technik (BHT)
-Project name: Book recommendation system
-Project author: Polina Kozyr
+**Data Science Master class**: Advanced software engineering<br />
+**University**: Berliner Hochschule für Technik (BHT)<br />
+**Project name**: Book recommendation system<br />
+**Project author**: Polina Kozyr<br />
 
 
-PROJECT DESCRIPTION
+PROJECT DESCRIPTION<br />
 The goal of the project is to create a simple book recommendation system based on the genre and author analysis. The user enters his name and surname and a book that he has already read and liked. Based on data of this book other books recommendations are calculated. Project is a pet one and may be concerned as a small service of some big recommendation system. For now recommendations are evaluated only by one book that user entered. Maybe in the future this system could be expanded and possibility of taking into account several books for recommendation will be implemented. 
 
-* Dataset with 54000 plus books was used.
-Metadata can be found here:
-https://www.kaggle.com/datasets/meetnaren/goodreads-best-books?select=book_data.csv
+* Dataset with 54000 plus books was used.<br />
+Metadata can be found here:<br />
+https://www.kaggle.com/datasets/meetnaren/goodreads-best-books?select=book_data.csv<br />
 The dataset was taken from Kaggle and contained book titles, authors, genres, descriptions, and ratings. The data from the csv file has been put into the database.
 
 1. **Use and understand Git!**<br />
